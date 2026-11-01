@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Luma : AI chat</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="logo">✳</span><strong>Luma</strong></div>
+    <button id="newChat" class="new-chat" type="button">➕ New chat</button>
+    <div class="side-label">YOUR CHATS</div>
+    <nav id="chatList" class="chat-list" aria-label="Chat history"></nav>
+    <div class="side-bottom"><span class="status-dot"></span><span id="connection" role="status">Connecting…</span></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button id="mobileMenu" class="icon-btn" type="button" aria-label="Toggle sidebar">☰</button>
+      <div class="top-actions">
+        <span id="topModelName" class="top-model-name">Choose a model below</span>
+        <button id="themeToggle" class="icon-btn theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">🌙</button>
+        <button id="clearChat" class="icon-btn" type="button" title="Clear current chat" aria-label="Clear current chat">🔄</button>
+      </div>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite">
+      <div id="welcome" class="welcome">
+        <div class="welcome-mark">◉</div>
+        <h1>What’s on your mind?</h1>
+        <p>Your private space to think, create, and explore.</p>
+        <div class="suggestions">
+          <button type="button" data-prompt="Explain something difficult in simple terms.">Explain a topic</button>
+          <button type="button" data-prompt="Help me write a small JavaScript program.">Write some code</button>
+          <button type="button" data-prompt="Give me three creative project ideas.">Brainstorm ideas</button>
+        </div>
+      </div>
+    </section>
+
+    <form id="composer" class="composer">
+      <textarea id="prompt" rows="1" placeholder="Message Luma…" aria-label="Message" required></textarea>
+      <div class="composer-footer">
+        <div class="composer-tools">
+          <label class="model-picker-label" for="modelSelect">Model</label>
+          <select id="modelSelect" aria-label="Choose model"><option value="">Loading models…</option></select>
+          <span class="hint">Enter to send · Shift + Enter for a new line</span>
+        </div>
+        <button id="sendBtn" type="submit" aria-label="Send message" title="Send message">⬆️</button>
+      </div>
+    </form>
+    <div class="bottom-note">AI can make mistakes. Check important information.</div>
+  </main>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

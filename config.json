@@ -1,0 +1,21 @@
+{
+  "server": {
+    "port": 8081,
+    "host": "0.0.0.0",
+    "modelApiUrl": "http://127.0.0.1:11434"
+  },
+  "model": {
+    "keepAlive": "5m",
+    "idleUnloadMs": 300000,
+    "sessionTimeoutMs": 90000,
+    "unloadOnLastTabClose": true
+  },
+  "chat": {
+    "maxRequestBytes": "2mb",
+    "maxMessages": 50
+  },
+  "ui": {
+    "theme": "dark",
+    "refreshModelsOnLoad": true
+  }
+}
